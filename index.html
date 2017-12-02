@@ -9,7 +9,7 @@
   <body>
     <header class="page-header">
       <a class="page-header__logo" href="#">
-        <img class="page-header__logo-image" src="img/pisnya-logo.svg" width="100%" height="20%" style="background-color: #e11932">
+        <img class="page-header__logo-image" src="img/pisnya-logo.svg"  alt="Логотип 'Українська пісня'" width="210" height="auto" style="background-color: #e11932">
       </a>
       <nav class="main-nav">
         <div class="main-nav__wrapper">
@@ -42,7 +42,7 @@
     </header>
     
     <div class="main-wrapper">
-      <aside>
+      <aside class="left-column">
         <nav class="site-nav">
           <button class="site-nav__toggle" type="button">Меню</button>
           <ul class="site-nav__list">
@@ -83,25 +83,201 @@
             </li>
           </ul>
         </nav>
-        <section class="banner_left">
-          <iframe class="banner_left__content" width="120px" height="600px">
-            
-          </iframe>
+        <section class="reclama banner">
+          <img class="banner__image--120-600" src="img/*.png" width="120px" height="600px">
         </section>
         <section class="tools">
-          <iframe class="tools__content" width="120px" height="200px">
+          <div class="tools__content counters" width="120px" height="200px">
           
-          </iframe>
+          </div>
         </section>
       </aside>
       
       <main class="page-main">
-
-
-
+      
+        <h1 class="visually-hidden">Сайт "Українська пісня" - тільки найкраща вітчизняна музика.</h1>
+        
+        <section class="promo">
+          <img class="promo__icon" src="img/day-song-logo.png" width="100px" height="100px">
+          <h2 class="promo__title"><a class="promo__lonk" href="#composition"><strong class="promo__song">Де би я - Сергій Бабкін</strong><span class="promo__authors">Слова: Сергій Бабкін, музика: Сергій Бабкін</span></a></h2>
+        </section>
+        
+        <section class="seven-songs__news">
+          <table class="seven-songs__list">
+            <caption class="seven-songs__header">
+              <h3 class="seven__title">Нова сімка <span class="visually-hidden">(cімка найшовіших комозицій сайту)</span></h3>
+            </caption>
+            <tr>
+              <td class="song__date">
+                <time datetime="2017-11-30">2017-11-30</time>
+              </td>
+              <td class="song__title">
+                <a class="song__link" href="#">Знаєш мій день - Тартак та Арсен Мірзоян
+              </td>
+            </tr>
+            <tr>
+              <td class="song__date">
+                <time datetime="2017-11-25">2017-11-25</time>
+              </td>
+              <td class="song__title">
+                <a class="song__link" href="#">Поговори зі мною - PIANO</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="song__date">
+                <time datetime="2017-11-10">2017-11-10</time>
+              </td>
+              <td class="song__title">
+                <a class="song__link" href="#">Обійми - Selfy</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="song__date">
+                <time datetime="2017-10-25">2017-10-25</time>
+              </td>
+              <td class="song__title">
+                <a class="song__link" href="#">Ворони - Олександр Макаров</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="song__date">
+                <time datetime="2017-10-18">2017-10-18</time>
+              </td>
+              <td class="song__title">
+                <a class="song__link" href="#">Коли ти зі мною - Лев Ременєв</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="song__date">
+                <time datetime="2017-07-07">2017-07-07</time>
+              </td>
+              <td class="song__title">
+                <a class="song__link" href="#">На вершинi - Pianoбой feat. Morphom</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="song__date">
+                <time datetime="2017-06-26">2017-06-26</time></td>
+              <td class="song__title">
+                <a class="song__link" href="#">Добре з тобою - Світлана Тарабарова</a>
+              </td>
+            </tr>
+          </table>
+        </section>
+        
+        <section class="reclame banner">
+          <img class="banner__image--468-60" src="" width="468px" height="60px">
+        </section>
+        
+        <article class="composition" id="composition">
+          <h1 class="composition__title">Де би я - Сергій Бабкін</h1>
+          <div class="composition__video">
+            <video class="video-container" style="width: 640px; height: 360px; left: 0px; top: 0px; opacity: 1; border: 1px solid lightgray" src="blob:https://www.youtube.com/552c3e16-b184-4438-9ca1-52d8677d34a1">
+              
+            </video>
+          </div>
+          <header class="composition__info">
+            <h2 class="composition__performer">
+              <span class=" visually-hidden">Виконавець: </span><a class="performer" href="#">Сергій Бабкін</a>
+            </h2>
+            <div class="composition__authors">
+              <span class="">автор музики: </span><a class="authors__link" href="#">Сергій Бабкін</a>
+            </div>
+            <div class="composition__authors">
+              <span class="">автор слів: </span><a class="authors__link" href="#">Сергій Бабкін</a>
+            </div>
+            <div class="composition__reating reating">
+              <span class="reating__stars visually-hidden">Рейтинг композиції: </span><span class="reating__number">6,0</span>
+            </div>
+          </header>
+          <section class="composition__text">
+            <p class="nazva">Де би я</p>
+            <p class="zag">&lt;1&gt;</p>
+            <p class="kuplet">
+            Я вештався світом, шукав дивні квіти, <br>
+            З кожним наступним кроком рахував роки. <br>
+            Твоїми ногами знаходив занедбані храми, <br>
+            Сердце, відлите в камені, легшало навпаки. <br>
+            </p>
+            <p class="zag">&lt;приспів:&gt;</p>
+            <p class="pryspiv">
+            Де би я, де би я, де би я, де би я не був <br>
+            Все про тебе нагадує, мов по заду ідеш, <br>
+            Або дивишся на мене крізь світ. <br>
+            Де би я, де би я, де би я, де би я не був <br>
+            Все охоплено твоею владою, <br>
+            За собою ведеш, вимальовуючи слід. <br>
+            </p>
+            <p class="zag">&lt;2&gt;</p>
+            <p class="kuplet">
+            Буває, злітаю, хочу сховатись від зграї, <br>
+            Все вмить завмирає, коли очі твої кидають пелюстки. <br>
+            Я все розумію, але недосяжна мрія <br>
+            Буде жити і після того, як дістанусь Твоєї руки. <br>
+            </p>
+            <p class="zag">&lt;приспів.&gt;</p>
+            <p class="zag">&lt;3&gt;</p>
+            <p class="kuplet">
+            Ти завжди зі мною поруч – праворуч, або ліворуч, <br>
+            В розмовах сторонніх людей я чую твої думки. <br>
+            Проте, до нестями, мусимо бавити себе почуттями, <br>
+            Ідем по одному колу, наче стрімкі струмки. <br>
+            </p>
+            <p class="zag">&lt;приспів.&gt;</p>      <p>* * *</p>
+          </section>
+          <footer class="composition__info release">
+            <div class="release__info">
+              <span class="">Телетрансляція: </span><a class="release__link" href="#">Танці з зірками, 2017 рік </a>
+            </div>
+            <div class="release__label">
+              <span class="">Ведавець: </span><a class="release__link" href="#">Телевізійний канал 1+1 (Один плюс один) </a>
+            </div>
+          </footer>
+        </article>
+      
       </main>
+      
+      <aside class="right-column">
+        <section class="top-composition">
+          <a class="top-composition__link">
+            <h3 class="top-composition__title">
+              <span class="top-composition__name">Любов жива </span>
+              <span class="top-composition__performer">Павло Табаков</span>
+            </h3>
+            <p  class="top-composition__images">
+              <img src="img/240-160.jpg" width="240" height="160" alt="Любов жива Павло Табаков">
+            </p>
+          </a>
+        </section>
+        
+        <section class="top10">
+          <h3>top-10</h3>
+          <ol>
+            <li>Вечірнє сонце - Брутто</li>
+            <li>Вона - Тарас Чубай / Плач Єремії</li>
+            <li>Червона рута  - Смерічка</li>
+            <li>Два кольори - Анатолій Мокренко</li>
+            <li>Пісня про рушник - Дмитро Гнатюк</li>
+            <li>Ой летіли дикі гуси - Ніна Матвієнко</li>
+            <li>Весна - Воплі Відоплясова</li>
+            <li>Вода - ТНМК</li>
+            <li>Пісня про пісню - Тарас Петриненко і Тетяна Горобець</li>
+            <li>Соколята - В'ячеслав Хурсенко</li>
+          </ol>
+        </section>
+        
+        <section class="reclame banner">
+          <img class="banner__image--240-400" src="img/*.png" width="240px" height="400px">
+        </section>
+      </aside>
       
     </div>
     
+    
+    <footer class="page-footer">
+      <section class="copyright">
+        Українська пісня | © 2003 - 2017 Всі права застережено
+      </section>
+    </footer>
   </body>
 </html>
