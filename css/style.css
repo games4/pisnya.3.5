@@ -1,0 +1,353 @@
+/*
+@font-face {
+  font-family: "PT Sans Narrow";
+  src: url("../fonts/ptsansnarrowbold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+*/
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: 
+    local("roboto Regular"), 
+    local("roboto-Regular"),
+    url("../fonts/roboto-regular.woff2") format("woff2"),
+    url("../fonts/roboto-regular.woff") format("woff");
+}
+
+
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 400;
+  src: 
+    local("roboto italic"), 
+    local("roboto-italic"),
+    url("../fonts/roboto-italic.woff2") format("woff2"),
+    url("../fonts/roboto-italic.woff") format("woff");
+}
+
+
+@font-face {
+  font-family: "Roboto";
+  font-style: bold;
+  font-weight: 700;
+  src: 
+    local("roboto bold"), 
+    local("roboto-bold"),
+    url("../fonts/roboto-bold.woff2") format("woff2"),
+    url("../fonts/roboto-bold.woff") format("woff");
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&subset=cyrillic,latin-ext');
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  min-width: 1020px;
+  /* Общие / преобладающие параметры шрифтов для всей страницы  */
+/*  font-weight: 700;*/
+  font-size: 16px;
+/*  line-height: 24px;*/
+  line-height: normal;
+  
+  font-family: "Roboto", "Arial", sans-serif;
+  /*Если в блоке задаём цвет фона, то сразу надо задать контрастный цвет текста.*/
+  color: rgba(0,0,0,0.6);
+  /* text-transform: uppercase; */
+  /*Зададим странице задний фон. Не забываем указать не только изображение, но и цвет фона.*/
+  background: #ffffff url("../img/body-   bg.jpg") no-repeat center top;
+}
+
+.page-header {
+  margin: 0 auto;
+  margin-bottom: 50px;
+  width: 1020px;
+  padding: 0;
+}
+
+.page-header__top {
+  display: flex;
+  margin: 0;
+  padding: 10px;
+  justify-content: space-between;
+  
+  background-color: rgba(230,0,60,1.0);
+  background-color: rgba(230,0,60,0.8);
+  
+  /* яскраво-малиновий */
+/*  background-color: rgba(255,30,85,1.0);
+  background-color: rgba(255,30,85,0.8);*/
+}
+
+.page-header__top .page-header__logo {
+  
+/*  background-color: rgba(100,100,60,1.0);*/
+}
+
+.page-header__logo-link {
+  margin: 0;
+  padding: 0;
+}
+
+.page-header__logo-image {
+  width: 200px;
+//  height: 73px;
+//  height: auto;
+//  height: 100%;
+  
+/*  background-color: rgba(230,100,60,1.0);*/
+}
+
+.main-nav {
+  display: flex;
+}
+
+.main-nav .main-nav__list {
+  margin: 0;
+  padding: 0;
+  
+  list-style: none;
+}
+
+.main-nav .main-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-list li {
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
+.main-list a {
+/*  font-weight: bold;*/
+  color: #ffffff;
+  
+/*  text-decoration: none;*/
+}
+
+.main-list a:hover {
+  text-decoration: none;
+}
+
+.main-nav .user-list {
+  display: flex;
+  justify-content: space-between;
+  display: none;
+}
+
+.site-nav {
+  padding: 10px;
+  background-color: rgba(230,100,60,0.05);
+}
+
+.site-nav .site-nav__toggle {
+  display: none;
+}
+
+.site-nav .site-nav__list {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-list__item .open-list {
+  display: none;
+}
+
+.site-list__item {
+/*  font-weight: bold;*/
+  text-transform: uppercase;
+}
+
+.site-list__item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-list__item a:hover {
+  color: rgba(0,0,0,0.8);
+  text-decoration: underline;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 1020px;
+  background-color: rgba(0,0,255,0.03);
+}
+
+.left-column {
+  margin: 0;
+  margin-right: 10px;
+  min-width: 150px;
+/*  width: 150px;*/
+}
+
+.page-main {
+  margin: 0 10px;
+  min-width: 490px;
+/*  width: 490px;*/
+}
+
+.page-main .promo {
+  display: flex;
+  margin-bottom: 50px;
+  padding-bottom: 25px;
+  
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.promo a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.promo a:hover {
+  text-decoration: underline;
+}
+
+.promo img {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+
+.promo h2 {
+  margin: 0;
+  margin-left: 10px;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  font-weight: bold;
+}
+
+.promo .promo__authors {
+  font-weight: normal;
+}
+
+.right-column {
+  margin: 0;
+  margin-left: 10px;
+/*  width: 320px;*/
+  min-width: 320px;
+
+}
+
+.left-column,
+.page-main,
+.right-column {
+/*  background-color: rgba(0,255,255,0.05);*/
+}
+
+/*
+.new-compositions table {
+  border-collapse: collapse;
+}
+
+.new-compositions td {
+  border: 1px solid #000000;
+}
+*/
+
+.new-compositions {
+  margin-bottom: 50px;
+  padding-bottom: 25px;
+  
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.new-compositions__title {
+  margin: 10px 0;
+  padding: 0;
+  
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.compositions__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.compositions__list li {
+  margin:  0;
+  padding: 5px 0;
+  padding-bottom: 5px;
+}
+
+/*
+.new-compositions__list li:nth-child(2n+1) {
+  background-color: rgba(230,100,60,0.05);
+}
+*/
+
+.compositions__list .compositions__date {
+  font-size: 14px;
+  color: rgba(0,0,0,0.4);
+}
+
+.compositions__list .compositions__title {
+  font-weight: normal;
+}
+
+.compositions__list a {
+  display: inline-block;
+  padding-bottom: 5px;
+
+  line-height: normal;
+  color: rgba(0,0,0,0.7);
+  text-decoration: none;
+  
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.compositions__list a:hover {
+  color: rgba(0,0,0,0.9);
+  border-bottom: 1px solid rgba(0,0,0,0.7);
+}
+
+.compositions__list a:hover .compositions__date {
+  color: rgba(0,0,0,0.7);
+}
+
+.compositions-list__title {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.compositions-list__description {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.compositions-list .the-end, 
+.composition__text .the-end {
+  font-weight: bold;
+  text-align: center;
+}
