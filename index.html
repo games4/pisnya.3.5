@@ -1,27 +1,37 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="uk">
   <head>
     <title>Українська пісня 3.5</title>
     <meta charset="utf-8">
     <meta name="description" content="Головна сторінка інтернет-проекта УКРАЇНСЬКА ПІСНЯ. Популярні українські пісні, інформація про їх виконавців та авторів. Історії створення пісень, їх тексти та відеокліпи.">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic,latin-ext" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+<!--
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&subset=cyrillic,latin-ext');
+    </style> 
+ -->
   </head>
+  
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="#">
-        <img class="page-header__logo-image" src="img/pisnya-logo.svg"  alt="Логотип 'Українська пісня'" width="210" height="auto" style="background-color: #e11932">
-      </a>
-      <nav class="main-nav">
-        <div class="main-nav__wrapper">
+      <div class="page-header__top">
+        <div class="page-header__logo">
+          <a class="page-header__logo-link" href="#">
+            <img class="page-header__logo-image" src="img/pisnya-logo.svg" alt="Логотип 'Українська пісня'" width="200" height="73">
+          </a>
+        </div>
+        <nav class="main-nav">
           <ul class="main-nav__list main-list">
             <li class="main-list__item">
-              <a href="#">Наш проект</a>
+              <a href="#">Проект</a>
             </li>
             <li class="main-list__item">
               <a href="#">Контакти </a>
             </li>
-            <li class="main-list__item">
-              <a href="#">Карта сайту</a>
+            <li class="main-list__item" style="display: none;">
+              <a href="#">Партнерам</a>
             </li>
           </ul>
           <ul class="main-nav__list user-list">
@@ -37,57 +47,57 @@
               <a class="btn" href="userup.html">Обрати</a>
             </li>
           </ul>
-        </div>
+        </nav>
+      </div>
+      <nav class="site-nav">
+        <button class="site-nav__toggle" type="button">Меню</button>
+        <ul class="site-nav__list">
+          <li class="site-list__item site-list__item--active">
+            <a href="#">Головна</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Новини</a>
+          </li>
+          <li class="site-list__item">
+            <a href="compositions.html">Композиції</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Відеокліпи</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Статті</a>
+          </li>
+          <li class="site-list__item">
+            Каталог
+            <ul class="open-list">
+              <li class="site-list__item--2">
+                <a href="#">Пісні</a>
+              </li>
+              <li class="site-list__item--2">
+                <a href="#">Виконавці</a>
+              </li>
+              <li class="site-list__item--2">
+                <a href="#">Композитори</a>
+              </li>
+              <li class="site-list__item--2">
+                <a href="#">Поети</a>
+              </li>
+            </ul>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Хронологія</a>
+          </li>
+        </ul>
       </nav>
     </header>
     
-    <div class="main-wrapper">
+    <div class="main-container">
       <aside class="left-column">
-        <nav class="site-nav">
-          <button class="site-nav__toggle" type="button">Меню</button>
-          <ul class="site-nav__list">
-            <li class="site-list__item site-list__item--active">
-              <a href="#">Головна</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">Новини</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">Відеокліпи</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">Видання</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">Статті</a>
-            </li>
-            <li class="site-list__item">
-              Каталог
-              <ul>
-                <li class="site-list__item">
-                  <a href="#">Пісні</a>
-                </li>
-                <li class="site-list__item">
-                  <a href="#">Виконавці</a>
-                </li>
-                <li class="site-list__item">
-                  <a href="#">Композитори</a>
-                </li>
-                <li class="site-list__item">
-                  <a href="#">Поети</a>
-                </li>
-              </ul>
-            </li>
-            <li class="site-list__item">
-              <a href="#">Хронологія</a>
-            </li>
-          </ul>
-        </nav>
-        <section class="reclama banner">
-          <img class="banner__image--120-600" src="img/*.png" width="120px" height="600px">
-        </section>
+        <div class="reclama banner">
+          <img class="banner__image--120-600" src="img/*.png" width="120" height="600" alt="рекламний банер">
+        </div>
         <section class="tools">
-          <div class="tools__content counters" width="120px" height="200px">
+          <div class="tools__content counters">
           
           </div>
         </section>
@@ -95,84 +105,137 @@
       
       <main class="page-main">
       
-        <h1 class="visually-hidden">Сайт "Українська пісня" - тільки найкраща вітчизняна музика.</h1>
+        <h1 class="visually-hidden">Сайт "Українська пісня" - тільки найкраща музика, тількі найцікавіші новини.</h1>
         
         <section class="promo">
-          <img class="promo__icon" src="img/day-song-logo.png" width="100px" height="100px">
-          <h2 class="promo__title"><a class="promo__lonk" href="#composition"><strong class="promo__song">Де би я - Сергій Бабкін</strong><span class="promo__authors">Слова: Сергій Бабкін, музика: Сергій Бабкін</span></a></h2>
+          <a class="promo__lonk" href="#composition">
+            <img class="promo__icon" src="img/day-song_promo.png" width="100" height="100" alt="Представляємо Сергія Бабкіна з композицією 'Де би я'">
+          </a>
+          <a class="promo__lonk" href="#composition">
+            <h2 class="promo__title">Де би я - Сергій Бабкін<br><span class="promo__authors">Слова: Сергій Бабкін, музика: Сергій Бабкін</span></h2>
+          </a>
         </section>
         
-        <section class="seven-songs__news">
-          <table class="seven-songs__list">
-            <caption class="seven-songs__header">
-              <h3 class="seven__title">Нова сімка <span class="visually-hidden">(cімка найшовіших комозицій сайту)</span></h3>
+        <section class="new-compositions" style="display: none;">
+          <table class="new-compositions__list">
+            <caption class="new-compositions__header">
+              <h3 class="seven__title">Наша сімка <span class="visually-hidden">(cімка найшовіших комозицій сайту)</span></h3>
             </caption>
             <tr>
-              <td class="song__date">
+              <td class="compositions__date">
                 <time datetime="2017-11-30">2017-11-30</time>
               </td>
-              <td class="song__title">
-                <a class="song__link" href="#">Знаєш мій день - Тартак та Арсен Мірзоян
+              <td class="compositions__title">
+                <a class="compositions__link" href="#">Знаєш мій день - Тартак та Арсен Мірзоян</a>
               </td>
             </tr>
             <tr>
-              <td class="song__date">
+              <td class="compositions__date">
                 <time datetime="2017-11-25">2017-11-25</time>
               </td>
-              <td class="song__title">
-                <a class="song__link" href="#">Поговори зі мною - PIANO</a>
+              <td class="compositions__title">
+                <a class="compositions__link" href="#">Поговори зі мною - PIANO</a>
               </td>
             </tr>
             <tr>
-              <td class="song__date">
+              <td class="compositions__date">
                 <time datetime="2017-11-10">2017-11-10</time>
               </td>
-              <td class="song__title">
-                <a class="song__link" href="#">Обійми - Selfy</a>
+              <td class="compositions__title">
+                <a class="compositions__link" href="#">Обійми - Selfy</a>
               </td>
             </tr>
             <tr>
-              <td class="song__date">
+              <td class="compositions__date">
                 <time datetime="2017-10-25">2017-10-25</time>
               </td>
-              <td class="song__title">
-                <a class="song__link" href="#">Ворони - Олександр Макаров</a>
+              <td class="compositions__title">
+                <a class="compositions__link" href="#">Ворони - Олександр Макаров</a>
               </td>
             </tr>
             <tr>
-              <td class="song__date">
+              <td class="compositions__date">
                 <time datetime="2017-10-18">2017-10-18</time>
               </td>
-              <td class="song__title">
-                <a class="song__link" href="#">Коли ти зі мною - Лев Ременєв</a>
+              <td class="compositions__title">
+                <a class="compositions__link" href="#">Коли ти зі мною - Лев Ременєв</a>
               </td>
             </tr>
             <tr>
-              <td class="song__date">
+              <td class="compositions__date">
                 <time datetime="2017-07-07">2017-07-07</time>
               </td>
-              <td class="song__title">
-                <a class="song__link" href="#">На вершинi - Pianoбой feat. Morphom</a>
+              <td class="compositions__title">
+                <a class="compositions__link" href="#">На вершинi - Pianoбой feat. Morphom</a>
               </td>
             </tr>
             <tr>
-              <td class="song__date">
+              <td class="compositions__date">
                 <time datetime="2017-06-26">2017-06-26</time></td>
-              <td class="song__title">
-                <a class="song__link" href="#">Добре з тобою - Світлана Тарабарова</a>
+              <td class="compositions__title">
+                <a class="compositions__link" href="#">Добре з тобою - Світлана Тарабарова</a>
               </td>
             </tr>
           </table>
         </section>
         
-        <section class="reclame banner">
-          <img class="banner__image--468-60" src="" width="468px" height="60px">
+        <section class="new-compositions">
+          <h3 class="new-compositions__title">Наша сімка <span class="visually-hidden">(cімка найшовіших комозицій сайту)</span></h3>
+          <ul class="compositions__list">
+            <li>
+              <a class="compositions__link" href="#">
+                <time class="compositions__date" datetime="2017-11-30">2017-11-30</time>
+                <b class="compositions__title">Знаєш мій день - Тартак та Арсен Мірзоян</b>
+              </a>
+            </li>
+            <li>
+              <a class="compositions__link" href="#">
+                <time class="compositions__date" datetime="2017-11-25">2017-11-25</time>
+                <b class="compositions__title">Поговори зі мною - PIANO</b>
+              </a>
+            </li>
+            <li>
+              <a class="compositions__link" href="#">
+                <time class="compositions__date" datetime="2017-11-10">2017-11-10</time>
+                <b class="compositions__title">Обійми - Selfy</b>
+              </a>
+            </li>
+            <li>
+              <a class="compositions__link" href="#">
+                <time class="compositions__date" datetime="2017-10-25">2017-10-25</time>
+                <b class="compositions__title">Ворони - Олександр Макаров</b>
+              </a>
+            </li>
+            <li>
+              <a class="compositions__link" href="#">
+                <time class="compositions__date" datetime="2017-10-18">2017-10-18</time>
+                <b class="compositions__title">Коли ти зі мною - Лев Ременєв</b>
+              </a>
+            </li>
+            <li>
+              <a class="compositions__link" href="#">
+                <time class="compositions__date" datetime="2017-07-07">2017-07-07</time>
+                <b class="compositions__title">На вершинi - Pianoбой feat. Morphom</b>
+              </a>
+            </li>
+            <li>
+              <a class="compositions__link" href="#">
+                <time class="compositions__date" datetime="2017-06-26">2017-06-26</time>
+                <b class="compositions__title">Добре з тобою - Світлана Тарабарова</b>
+              </a>
+            </li>
+          </ul>
         </section>
+
+        
+        <div class="reclame banner">
+          <img class="banner__image--468-60" src="#" width="468" height="60" alt="рекламний банер">
+        </div>
         
         <article class="composition" id="composition">
-          <h1 class="composition__title">Де би я - Сергій Бабкін</h1>
+          <h2 class="composition__title">Де би я - Сергій Бабкін</h2>
           <div class="composition__video">
-            <video class="video-container" style="width: 640px; height: 360px; left: 0px; top: 0px; opacity: 1; border: 1px solid lightgray" src="blob:https://www.youtube.com/552c3e16-b184-4438-9ca1-52d8677d34a1">
+            <video class="video-container" style="width: 480px; height: 270px; left: 0px; top: 0px; opacity: 1; border: 1px solid lightgray" src="blob:https://www.youtube.com/552c3e16-b184-4438-9ca1-52d8677d34a1">
               
             </video>
           </div>
@@ -223,7 +286,8 @@
             Проте, до нестями, мусимо бавити себе почуттями, <br>
             Ідем по одному колу, наче стрімкі струмки. <br>
             </p>
-            <p class="zag">&lt;приспів.&gt;</p>      <p>* * *</p>
+            <p class="zag">&lt;приспів.&gt;</p>
+            <p class="the-end">* * *</p>
           </section>
           <footer class="composition__info release">
             <div class="release__info">
@@ -250,24 +314,8 @@
           </a>
         </section>
         
-        <section class="top10">
-          <h3>top-10</h3>
-          <ol>
-            <li>Вечірнє сонце - Брутто</li>
-            <li>Вона - Тарас Чубай / Плач Єремії</li>
-            <li>Червона рута  - Смерічка</li>
-            <li>Два кольори - Анатолій Мокренко</li>
-            <li>Пісня про рушник - Дмитро Гнатюк</li>
-            <li>Ой летіли дикі гуси - Ніна Матвієнко</li>
-            <li>Весна - Воплі Відоплясова</li>
-            <li>Вода - ТНМК</li>
-            <li>Пісня про пісню - Тарас Петриненко і Тетяна Горобець</li>
-            <li>Соколята - В'ячеслав Хурсенко</li>
-          </ol>
-        </section>
-        
         <section class="reclame banner">
-          <img class="banner__image--240-400" src="img/*.png" width="240px" height="400px">
+          <img class="banner__image--240-400" src="img/*.png" width="240" height="400" alt="рекламний банер">
         </section>
       </aside>
       
