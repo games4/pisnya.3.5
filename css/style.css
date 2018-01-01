@@ -1,48 +1,42 @@
 /*
 @font-face {
-  font-family: "PT Sans Narrow";
-  src: url("../fonts/ptsansnarrowbold.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 700;
-}
-*/
-
-@font-face {
-  font-family: "Roboto";
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
   src: 
-    local("roboto Regular"), 
-    local("roboto-Regular"),
+    local("PT Sans"), 
+    local("PTSans-Regular"),
     url("../fonts/roboto-regular.woff2") format("woff2"),
     url("../fonts/roboto-regular.woff") format("woff");
 }
-
-
+*/
+/*
 @font-face {
-  font-family: "Roboto";
+  font-family: "PT Sans";
   font-style: italic;
   font-weight: 400;
   src: 
-    local("roboto italic"), 
-    local("roboto-italic"),
+    local("PT Sans Italic"), 
+    local("PTSans-Italic"),
     url("../fonts/roboto-italic.woff2") format("woff2"),
     url("../fonts/roboto-italic.woff") format("woff");
 }
-
-
+*/
+/*
 @font-face {
-  font-family: "Roboto";
+  font-family: "PT Sans";
   font-style: bold;
   font-weight: 700;
   src: 
-    local("roboto bold"), 
-    local("roboto-bold"),
+    local("PT Sans Bold"), 
+    local("PTSans-Bold"),
     url("../fonts/roboto-bold.woff2") format("woff2"),
     url("../fonts/roboto-bold.woff") format("woff");
 }
+*/
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&subset=cyrillic,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic');
+/* @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&subset=cyrillic'); */
 
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
@@ -63,14 +57,17 @@ body {
 
   min-width: 1020px;
   /* Общие / преобладающие параметры шрифтов для всей страницы  */
-/*  font-weight: 700;*/
+  font-weight: normal;
   font-size: 16px;
-/*  line-height: 24px;*/
   line-height: normal;
+  line-height: 20px;
   
-  font-family: "Roboto", "Arial", sans-serif;
+  /* font-family: "Source Sans Pro", "Arial", sans-serif; */
+  font-family: "PT Sans", "Arial", sans-serif;
+  /* font-family: "Open Sans", "Arial", sans-serif; */
+
   /*Если в блоке задаём цвет фона, то сразу надо задать контрастный цвет текста.*/
-  color: rgba(0,0,0,0.6);
+  color: rgba(0,0,0,0.7);
   /* text-transform: uppercase; */
   /*Зададим странице задний фон. Не забываем указать не только изображение, но и цвет фона.*/
   background: #ffffff url("../img/body-   bg.jpg") no-repeat center top;
@@ -155,8 +152,9 @@ body {
 }
 
 .site-nav {
-  padding: 10px;
-  background-color: rgba(230,100,60,0.05);
+  padding: 0px;
+  
+  /* background-color: rgba(230,100,60,0.1); */
 }
 
 .site-nav .site-nav__toggle {
@@ -165,10 +163,15 @@ body {
 
 .site-nav .site-nav__list {
   display: flex;
-  justify-content: space-around;
+  /* flex-wrap: wrap; */
+  /* justify-content: space-around; */
+  justify-content: center;
   margin: 0;
   padding: 0;
+  
   list-style: none;
+  
+  color: rgba(0,0,0,0.7);
 }
 
 .site-list__item .open-list {
@@ -176,19 +179,44 @@ body {
 }
 
 .site-list__item {
-/*  font-weight: bold;*/
+  flex-grow: 1;
+  box-sizing: border-box;
+  /* width: 100%; */
+  width: auto;
+  padding: 10px;
   text-transform: uppercase;
+  text-align: center;
+  /* border-bottom: 4px solid transparent; */
+}
+
+.site-list__item:hover {
+  background-color: rgba(230,0,60,0.1);
+}
+
+.site-list__item--active:hover {
+  background-color: rgba(255,255,255,1);
+  /* background-color: rgba(230,0,60,0.1); */
 }
 
 .site-list__item a {
-  color: inherit;
+  display: inline-box;
   text-decoration: none;
+  color: inherit;
 }
 
 .site-list__item a:hover {
-  color: rgba(0,0,0,0.8);
-  text-decoration: underline;
+  /* color: rgba(0,0,0,0.9); */
+  /* text-decoration: underline; */
+  /* border-bottom: 1px solid rgba(0,0,0,0.7); */
 }
+
+.site-list__item--active a {
+  cursor: default;
+  padding-bottom: 5px;
+  border-bottom: 4px solid rgba(230,0,60,0.8);
+}
+
+
 
 .main-container {
   display: flex;
@@ -215,10 +243,20 @@ body {
 
 .page-main .promo {
   display: flex;
-  margin-bottom: 50px;
-  padding-bottom: 25px;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
   
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  /* box-shadow: 0 10px 10px -10px rgba(0,0,0,0.5); */
+}
+
+.composition__release {
+  margin: 0;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  /* box-shadow: 0 5px 5px -5px rgba(0,0,0,0.5); */
+  /* box-shadow: 0 10px 10px -10px rgba(0,0,0,0.5); */
 }
 
 .promo a {
@@ -255,7 +293,22 @@ body {
   margin-left: 10px;
 /*  width: 320px;*/
   min-width: 320px;
+}
 
+.right-column__banner {
+//  margin: 0 auto;
+  width: 300px;
+  height: 600px;
+
+  text-align: center;
+
+  background-image: linear-gradient(to right,#00feff 0,#10fcb2 67%,#24f954 100%);
+}
+
+.right-column__banner--promo {
+  font-size: 36px;
+  font-weight: bold;
+  color: rgba(255,255,255,0.5);
 }
 
 .left-column,
@@ -276,9 +329,9 @@ body {
 
 .new-compositions {
   margin-bottom: 50px;
-  padding-bottom: 25px;
+//  padding-bottom: 25px;
   
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+//  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .new-compositions__title {
@@ -297,8 +350,9 @@ body {
 
 .compositions__list li {
   margin:  0;
-  padding: 5px 0;
-  padding-bottom: 5px;
+  /* padding: 5px 0; */
+  /* padding-bottom: 5px; */
+  margin-bottom: 8px;
 }
 
 /*
@@ -318,10 +372,8 @@ body {
 
 .compositions__list a {
   display: inline-block;
-  padding-bottom: 5px;
 
-  line-height: normal;
-  color: rgba(0,0,0,0.7);
+  color: inherit;
   text-decoration: none;
   
   border-bottom: 1px solid rgba(0,0,0,0.2);
@@ -350,4 +402,213 @@ body {
 .composition__text .the-end {
   font-weight: bold;
   text-align: center;
+}
+
+.page-main__banner--468-60 {
+  margin: 0;
+  margin-right: auto;
+  margin-bottom: 70px;
+  width: 468px;
+  height: 60px;
+  
+  text-align: center;
+  
+  background-image: linear-gradient(to bottom, rgb(0, 62, 170) 40%, rgb(0, 78, 194) 60%, rgb(0, 96, 223) 80%, rgb(0, 128, 255) 90%, rgb(0, 199, 255) 100%);
+}
+
+.page-main__banner--promo {
+  font-size: 36px;
+  font-weight: bold;
+  color: rgba(255,255,255,0.3);
+}
+
+/*
+.composition__video {
+  width: 100%;
+  height: auto;
+}
+
+.composition__video iframe {
+  width: 100%;
+  height: auto;
+}
+*/
+
+.composition {
+  border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+.composition__caption {
+  display: block;
+  margin: 15px 0;
+  font-size: inherit;
+  color: rgba(0,0,0,0.9);
+}
+
+.composition__video {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.composition__video iframe {
+  box-shadow: 0 10px 10px -5px rgba(0,0,0,0.5);
+}
+
+.composition__title {
+  margin: 0;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  
+  color: rgba(0,0,0,0.8);
+}
+
+.composition__reating {
+  margin: 0;
+  color: rgba(0,0,0,0.5);
+  
+/*  border-bottom: 1px solid rgba(0,0,0,0.2);*/
+}
+
+.reating__number {
+  font-weight: normal;
+  color: rgba(0,0,0,0.7);
+}
+
+.composition__performer,
+.composition__authors,
+.release__info,
+.release__label {
+  margin: 0;
+  font-size: 16px;
+  color: rgba(0,0,0,0.5);
+}
+
+.composition__performer {
+  margin-top: 10px;
+  font-weight: normal;
+}
+
+.composition__performer a,
+.composition__authors a {
+  color: rgba(0,0,0,0.7);
+}
+
+.composition__performer a:hover,
+.composition__authors a:hover {
+  color: rgba(0,0,0,0.9);
+}
+
+/*
+.composition__performer a,
+.composition__authors a {
+  display: inline-block;
+  color: rgba(0,0,0,0.7);
+  text-decoration: none;
+  
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.composition__performer a:hover,
+.composition__authors a:hover {
+  color: rgba(0,0,0,0.9);
+  border-bottom: 1px solid rgba(0,0,0,0.7);
+}
+*/
+
+.composition__info {
+  margin: 0;
+  margin-bottom: 16px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  /* box-shadow: 0 5px 5px -5px rgba(0,0,0,0.2); */
+}
+
+.lyric {
+  margin: 0;
+
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+/*  padding-left: 20px;*/
+  
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  
+  /* червона стрічка зліва */
+  /*  margin-bottom: 16px;
+  padding-bottom: 0;
+  padding-left: 20px;*/
+  /* padding-left: 40px; */
+  /* border-left: 10px solid rgba(230,0,60,0.1); */
+}
+
+.lyric .lyric__title {
+  margin: 0;
+  /* margin-top: 32px;  */
+  margin-bottom: 16px; 
+  
+  font-size: 18px;
+  font-weight: bold;
+  color: rgba(0,0,0,0.8);
+}
+
+.lyric p {
+  margin: 0;
+}
+
+.lyric .caption {
+  margin: 0;
+  margin-top: 16px;
+  
+  color: rgba(0,0,0,0.8);
+}
+
+.lyric .verse,
+.lyric .chorus {
+  margin: 0;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.lyric .caption + .verse,
+.lyric .caption + .chorus {
+  margin: 0;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.lyric .lyric__end {
+  margin-top: 16px;
+  margin-bottom: 16px; 
+}
+
+.composition__release a {
+  color: rgba(0,0,0,0.7);
+}
+
+.composition__release a:hover {
+  color: rgba(0,0,0,0.9);
+}
+
+.composition__release {
+  margin: 0;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  
+/*  padding-top: 32px;
+  border-top: 1px solid rgba(0,0,0,0.2);*/
+
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  /* box-shadow: 0 5px 5px -5px rgba(0,0,0,0.5); */
+  /* box-shadow: 0 10px 10px -10px rgba(0,0,0,0.5); */
+}
+
+/* перевизначення відступів блоків */
+.page-main .promo,
+.page-main .composition__release {
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  /* box-shadow: 0 10px 10px -10px rgba(0,0,0,0.5); */
 }
