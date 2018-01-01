@@ -4,14 +4,16 @@
     <title>Українська пісня 3.5</title>
     <meta charset="utf-8">
     <meta name="description" content="Головна сторінка інтернет-проекта УКРАЇНСЬКА ПІСНЯ. Популярні українські пісні, інформація про їх виконавців та авторів. Історії створення пісень, їх тексти та відеокліпи.">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic,latin-ext" rel="stylesheet"> -->
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&amp;subset=cyrillic" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&amp;subset=cyrillic" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet"> 
+    
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-<!--
-    <style>
-      @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&subset=cyrillic,latin-ext');
-    </style> 
- -->
+    <link rel="stylesheet" href="css/settings.css">
+    
   </head>
   
   <body>
@@ -49,6 +51,7 @@
           </ul>
         </nav>
       </div>
+      
       <nav class="site-nav">
         <button class="site-nav__toggle" type="button">Меню</button>
         <ul class="site-nav__list">
@@ -106,12 +109,12 @@
       <main class="page-main">
       
         <h1 class="visually-hidden">Сайт "Українська пісня" - тільки найкраща музика, тількі найцікавіші новини.</h1>
-        
+
         <section class="promo">
-          <a class="promo__lonk" href="#composition">
+          <a class="promo__link" href="#composition">
             <img class="promo__icon" src="img/day-song_promo.png" width="100" height="100" alt="Представляємо Сергія Бабкіна з композицією 'Де би я'">
           </a>
-          <a class="promo__lonk" href="#composition">
+          <a class="promo__link" href="#composition">
             <h2 class="promo__title">Де би я - Сергій Бабкін<br><span class="promo__authors">Слова: Сергій Бабкін, музика: Сергій Бабкін</span></h2>
           </a>
         </section>
@@ -119,7 +122,7 @@
         <section class="new-compositions" style="display: none;">
           <table class="new-compositions__list">
             <caption class="new-compositions__header">
-              <h3 class="seven__title">Наша сімка <span class="visually-hidden">(cімка найшовіших комозицій сайту)</span></h3>
+              <h3 class="seven__title">#Наша сімка <span class="visually-hidden">(cімка найшовіших комозицій сайту)</span></h3>
             </caption>
             <tr>
               <td class="compositions__date">
@@ -180,7 +183,7 @@
         </section>
         
         <section class="new-compositions">
-          <h3 class="new-compositions__title">Наша сімка <span class="visually-hidden">(cімка найшовіших комозицій сайту)</span></h3>
+          <h3 class="new-compositions__title">#Наша сімка <span class="visually-hidden">(cімка найшовіших комозицій сайту)</span></h3>
           <ul class="compositions__list">
             <li>
               <a class="compositions__link" href="#">
@@ -226,44 +229,47 @@
             </li>
           </ul>
         </section>
-
         
-        <div class="reclame banner">
-          <img class="banner__image--468-60" src="#" width="468" height="60" alt="рекламний банер">
+        <div class="page-main__banner--468-60">
+          <span class="page-main__banner--promo">Банер 468 * 60</span>
         </div>
         
         <article class="composition" id="composition">
-          <h2 class="composition__title">Де би я - Сергій Бабкін</h2>
+        
+          <span class="composition__caption">#Пісня дня</span>
+          
           <div class="composition__video">
-            <video class="video-container" style="width: 480px; height: 270px; left: 0px; top: 0px; opacity: 1; border: 1px solid lightgray" src="blob:https://www.youtube.com/552c3e16-b184-4438-9ca1-52d8677d34a1">
-              
-            </video>
+            <iframe width="480" height="270" src="https://www.youtube-nocookie.com/embed/dSd4ss0qK_g?rel=0&amp;start=127" frameborder="0" allowfullscreen></iframe>
           </div>
+          
           <header class="composition__info">
-            <h2 class="composition__performer">
-              <span class=" visually-hidden">Виконавець: </span><a class="performer" href="#">Сергій Бабкін</a>
-            </h2>
-            <div class="composition__authors">
+            <h2 class="composition__title">Де би я - Сергій Бабкін</h2>
+            <p class="composition__reating reating">
+              <span class="reating__stars visually-hidden-2">загальна оцінка </span><b class="reating__number">6,0</b>
+              <span class="reating__stars visually-hidden-2">поданих голосів </span><b class="reating__number">214</b>
+            </p>
+            <p class="composition__performer">
+              <span class="visually-hidden">виконавець: </span><a class="performer" href="#">Сергій Бабкін</a>
+            </p>
+            <p class="composition__authors">
+              <span class="">автор тексту: </span><a class="authors__link" href="#">Сергій Бабкін</a>
+            </p>
+            <p class="composition__authors">
               <span class="">автор музики: </span><a class="authors__link" href="#">Сергій Бабкін</a>
-            </div>
-            <div class="composition__authors">
-              <span class="">автор слів: </span><a class="authors__link" href="#">Сергій Бабкін</a>
-            </div>
-            <div class="composition__reating reating">
-              <span class="reating__stars visually-hidden">Рейтинг композиції: </span><span class="reating__number">6,0</span>
-            </div>
+            </p>
           </header>
-          <section class="composition__text">
-            <p class="nazva">Де би я</p>
-            <p class="zag">&lt;1&gt;</p>
-            <p class="kuplet">
+          
+          <section class="lyric">
+            <h3 class="lyric__title">Де би я</h3>
+            <p class="caption">&lt;1:&gt;</p>
+            <p class="verse">
             Я вештався світом, шукав дивні квіти, <br>
             З кожним наступним кроком рахував роки. <br>
             Твоїми ногами знаходив занедбані храми, <br>
             Сердце, відлите в камені, легшало навпаки. <br>
             </p>
-            <p class="zag">&lt;приспів:&gt;</p>
-            <p class="pryspiv">
+            <p class="caption">&lt;приспів:&gt;</p>
+            <p class="chorus">
             Де би я, де би я, де би я, де би я не був <br>
             Все про тебе нагадує, мов по заду ідеш, <br>
             Або дивишся на мене крізь світ. <br>
@@ -271,37 +277,40 @@
             Все охоплено твоею владою, <br>
             За собою ведеш, вимальовуючи слід. <br>
             </p>
-            <p class="zag">&lt;2&gt;</p>
-            <p class="kuplet">
+            <p class="caption">&lt;2:&gt;</p>
+            <p class="verse">
             Буває, злітаю, хочу сховатись від зграї, <br>
             Все вмить завмирає, коли очі твої кидають пелюстки. <br>
             Я все розумію, але недосяжна мрія <br>
             Буде жити і після того, як дістанусь Твоєї руки. <br>
             </p>
-            <p class="zag">&lt;приспів.&gt;</p>
-            <p class="zag">&lt;3&gt;</p>
-            <p class="kuplet">
+            <p class="caption">&lt;приспів.&gt;</p>
+            <p class="caption">&lt;3:&gt;</p>
+            <p class="verse">
             Ти завжди зі мною поруч – праворуч, або ліворуч, <br>
             В розмовах сторонніх людей я чую твої думки. <br>
             Проте, до нестями, мусимо бавити себе почуттями, <br>
             Ідем по одному колу, наче стрімкі струмки. <br>
             </p>
-            <p class="zag">&lt;приспів.&gt;</p>
-            <p class="the-end">* * *</p>
+            <p class="caption">&lt;приспів.&gt;</p>
+            <p class="lyric__end">* * *</p>
           </section>
-          <footer class="composition__info release">
-            <div class="release__info">
+          
+          <footer class="composition__release">
+            <p class="release__info">
               <span class="">Телетрансляція: </span><a class="release__link" href="#">Танці з зірками, 2017 рік </a>
-            </div>
-            <div class="release__label">
+            </p>
+            <p class="release__label">
               <span class="">Ведавець: </span><a class="release__link" href="#">Телевізійний канал 1+1 (Один плюс один) </a>
-            </div>
+            </p>
           </footer>
+          
         </article>
       
       </main>
       
       <aside class="right-column">
+      
         <section class="top-composition">
           <a class="top-composition__link">
             <h3 class="top-composition__title">
@@ -314,9 +323,10 @@
           </a>
         </section>
         
-        <section class="reclame banner">
-          <img class="banner__image--240-400" src="img/*.png" width="240" height="400" alt="рекламний банер">
-        </section>
+        <div class="right-column__banner">
+          <span class="right-column__banner--promo">Банер 300 * 600</span>
+        </div>
+        
       </aside>
       
     </div>
