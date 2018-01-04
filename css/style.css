@@ -635,3 +635,77 @@ body {
   /* box-shadow: 0 10px 10px -10px rgba(0,0,0,0.5); */
 }
 
+.page-footer {
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 1020px;
+  padding: 0;
+}
+
+.page-footer__top {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 10px;
+  
+  background-color: rgba(230,0,60,1.0);
+}
+
+.page-footer__top .page-footer__logo {
+  margin: 10px 20px;
+}
+
+.page-footer__logo-link {
+  margin: 0;
+  padding: 0;
+}
+
+.page-footer__logo-image {
+  width: 150px;
+  height: 100%;
+}
+
+.page-footer__social {
+  margin: auto 20px;
+  color: rgba(255,255,255,1.0);
+}
+
+.social__title {
+  display: inline-block;
+}
+
+.social__link {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-size: 0;
+  vertical-align: middle;
+  
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,1.0);
+} 
+
+.social__link:hover {
+  border: 1px solid rgba(255,255,255,0.5);
+}
+
+.social__link--fb {
+  background-image: url("../img/sprite.png");
+  background-position: -30px -430px;
+  background-repeat: no-repeat;
+}
+
+.social__link--gp {
+  background-image: url("../img/sprite.png");
+  background-position: -30px -280px;
+  background-repeat: no-repeat;
+}
+
+.social__link--tw {
+  background-image: url("../img/sprite.png");
+  background-position: -30px -130px;
+  background-repeat: no-repeat;
+}
