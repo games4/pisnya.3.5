@@ -57,39 +57,39 @@
       <nav class="site-nav">
         <button class="site-nav__toggle" type="button">Меню</button>
         <ul class="site-nav__list">
-          <li class="site-list__item site-list__item--active">
+          <li class="site-nav__item site-nav__item--active">
             <a href="#">Головна</a>
           </li>
-          <li class="site-list__item">
+          <li class="site-nav__item">
             <a href="#">Новини</a>
           </li>
-          <li class="site-list__item">
+          <li class="site-nav__item">
             <a href="compositions.html">Композиції</a>
           </li>
-          <li class="site-list__item">
+          <li class="site-nav__item">
             <a href="#">Відеокліпи</a>
           </li>
-          <li class="site-list__item">
+          <li class="site-nav__item">
             <a href="#">Статті</a>
           </li>
-          <li class="site-list__item open-menu">
+          <li class="site-nav__item open-menu">
             Каталог
-            <ul class="open-menu__list">
-              <li class="open-menu__item">
-                <a href="#">Пісні</a>
-              </li>
-              <li class="open-menu__item">
-                <a href="#">Виконавці</a>
-              </li>
-              <li class="open-menu__item">
-                <a href="#">Композитори</a>
-              </li>
-              <li class="open-menu__item">
-                <a href="#">Поети</a>
-              </li>
-            </ul>
+              <ul class="open-menu__list">
+                <li class="open-menu__item">
+                  <a href="#">Пісні</a>
+                </li>
+                <li class="open-menu__item">
+                  <a href="#">Виконавці</a>
+                </li>
+                <li class="open-menu__item">
+                  <a href="#">Композитори</a>
+                </li>
+                <li class="open-menu__item">
+                  <a href="#">Поети</a>
+                </li>
+              </ul>
           </li>
-          <li class="site-list__item">
+          <li class="site-nav__item">
             <a href="#">Хронологія</a>
           </li>
 
@@ -340,22 +340,40 @@
       <div class="page-footer__top">
         <div class="page-footer__logo">
           <a class="page-footer__logo-link" href="#">
-            <img class="page-footer__logo-image" src="img/pisnya-logo.svg" alt="Логотип 'Українська пісня'" width="200" height="73">
+            <img class="page-footer__logo-image" src="img/pisnya-logo.svg" alt="Логотип проекта 'Українська пісня'" width="220" height="100%">
           </a>
         </div>
         
         <div class="page-footer__social social">
           <b class="social__title">Приєднуйтеся до нас</b>
           <a class="social__link social__link--fb" href="https://facebook.com/pisnya.org.ua" target="blank">Українська пісня у Фейсбуці</a>
-          <a class="social__link social__link--gp" href="https://plus.google.com/pisnya.org.ua" target="blank">Українська пісня в Гугл плюс</a>
+          <a class="social__link social__link--yt" href="https://youtube.com/pisnya.org.ua" target="blank">Українська пісня на Ютуб</a>
           <a class="social__link social__link--tw" href="https://twitter.com/pisnya.org.ua" target="blank">Українська пісня в Твіттері</a>
         </div>
         
       </div>
       
       <div class="page-footer__content">
+
+      <section class="page-footer__menu menu__project">
+          <ul class="page-footer__list">
+            <li>
+              <a href="#">Про проект</a>
+            </li>
+            <li>
+              <a href="#">Контакти</a>
+            </li>
+            <li>
+              <a href="#">Реклама</a>
+            </li>
+            <li>
+              <a href="#">Карта</a>
+            </li>
+          </ul>
+        </section>
+        
         <section class="page-footer__menu">
-          <h3 class="page-footer__title">Каталог</h3>
+          <h3 class="page-footer__title none">Каталог</h3>
           <ul class="page-footer__list">
             <li>
               <a href="#">Пісні</a>
@@ -369,16 +387,36 @@
             <li>
               <a href="#">Автори текстів</a>
             </li>
-            <li>
+            <li class="none">
               <a href="#">Стилі</a>
             </li>
           </ul>
         </section>
         
-      </div>
-        <section class="copyright">
-          Українська пісня | © 2003 - 2018 Всі права застережено
+        <section class="page-footer__menu menu__project">
+          <ul class="page-footer__list">
+            <li>
+              <a href="#">Увійти</a>
+            </li>
+            <li>
+              <a href="#">Зареєструватися</a>
+            </li>
+            <li>
+              <a href="#">Залишити відгук</a>
+            </li>
+          </ul>
         </section>
+        
+      </div>
+      
+      <section class="page-footer__bottom">
+        <p class="page-footer__copyright">
+          Культурно-соціальний проект "Українська пісня" | © 2003 - 2018 Всі права застережено
+        </p>
+        <p class="page-footer__development">
+          <a href="https://games4.github.io/">Зроблено з <span class="page-footer__heart">любов'ю</span> до людей!</a>
+        </p>
+      </section>
       
     </footer>
     
