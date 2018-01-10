@@ -42,6 +42,11 @@
   display: none;
 }
 
+.img {
+  max-width: 100%;
+  height: auto;
+}
+
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -84,7 +89,10 @@ body {
   width: 1020px;
   padding: 0;
   
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  /* border-bottom: 1px solid rgba(0,0,0,0.1); */
+  /* box-shadow: 0 5px 10px -5px rgba(0,0,0,0.5); */
+  box-shadow: 0 5px 5px -2px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 0px 0px rgba(0,0,0,0.2);
 }
 
 .page-header__top {
@@ -99,6 +107,11 @@ body {
   /* яскраво-малиновий */
   /* background-color: rgba(255,30,85,1.0); */
   /* background-color: rgba(255,30,85,0.8); */
+  
+  /* box-shadow: 0 10px 10px -5px rgba(0,0,0,0.5); */
+  box-shadow: 0 7px 5px -5px rgba(0,0,0,0.5);
+  /* box-shadow: 0 3px 5px 2px rgba(0,0,0,0.5); */
+
 }
 
 .page-header__top .page-header__logo {
@@ -202,7 +215,7 @@ body {
   /* border-bottom: 1px solid rgba(0,0,0,0.7); */
 
   /* background-color: rgba(230,0,60,0.2); */
-  border-bottom: 4px solid rgba(230,0,60,0.8);
+  border-bottom: 4px solid rgba(230,0,60,1.0);
   
   /* background-color: rgba(255,255,255,1); */
   /* background-color: rgba(250,204,216,1.0); */
@@ -210,13 +223,13 @@ body {
 
 .site-nav__item--active > a {
   cursor: default;
-  border-bottom: 4px solid rgba(230,0,60,0.8);
+  border-bottom: 4px solid rgba(230,0,60,1.0);
 }
 
 .site-nav .open-menu {
   position: relative;
   padding: 10px 20px;
-
+  cursor: pointer;
 }
 
 .open-menu .open-menu__list {
@@ -224,7 +237,8 @@ body {
   
   padding: 0;
   list-style: none;
-  background-color: rgba(250,204,216,0.8);
+  background-color: rgba(255,255,255,1.0);
+  background-color: rgba(230,0,60,1.0);
 }
 
 .open-menu:hover .open-menu__list {
@@ -232,7 +246,9 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  /* margin-left: -40px; */
+  margin-top: -4px;
+  /* border-top: 4px solid rgba(230,0,60,1.0); */
+  box-shadow: 0 3px 5px 2px rgba(0,0,0,0.5);
 }
 
 .open-menu__item {
@@ -242,13 +258,21 @@ body {
 .open-menu__item a {
   display: block;
   padding: 10px 20px;
+  /* border-bottom: 4px solid transparent; */
+  border-left: 4px solid transparent;
   
   text-decoration: none;
-  color: inherit;
+  color: #ffffff;
 }
 
 .open-menu__item a:hover {
-  background-color: rgba(255,255,255,0.8);
+  /* border-bottom: 4px solid rgba(230,0,60,1.0); */
+  
+  color: inherit;
+  
+  /* світло-рожевий */
+  /* background-color: rgba(230,0,160,0.3); */
+  background-color: rgba(255,255,255,1.0);
 }
 
 .main-container {
