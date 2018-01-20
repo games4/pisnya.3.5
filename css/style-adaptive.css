@@ -84,27 +84,8 @@ body {
 }
 
 @media (min-width: 480px) {
-    body {
-    min-width: 320px;
-    margin: 0;
-    padding: 0;
-    
-    /* Общие / преобладающие параметры шрифтов для всей страницы  */
-    font-weight: normal;
+  body {
     font-size: 16px;
-    line-height: normal;
-    line-height: 20px;
-    /* text-transform: uppercase; */
-    
-    font-family: "PT Sans", "Arial", sans-serif;
-    /* font-family: "Source Sans Pro", "Arial", sans-serif; */
-    /* font-family: "Arial", sans-serif; */
-    /* font-family: "Open Sans", "Arial", sans-serif; */
-
-    /*Если в блоке задаём цвет фона, то сразу надо задать контрастный цвет текста.*/
-    color: rgba(0,0,0,0.7);
-    /*Зададим странице задний фон. Не забываем указать не только изображение, но и цвет фона.*/
-    background: #ffffff url("../img/body-   bg.jpg") no-repeat center top;
   }
 }
 
@@ -150,6 +131,12 @@ body {
 }
 
 @media (min-width: 768px) {
+  .page-header {
+    /* margin: 0; */
+    /* margin-bottom: 40px; */
+    /* padding: 0; */
+  }
+  
   .page-header__top {
     box-sizing: border-box;
     display: flex;
@@ -492,24 +479,25 @@ body {
 
 @media (min-width: 768px) {
   .left-column__banner {
-    margin: 0 auto;
-    margin-bottom: 50px;
-    
-    text-align: center;
-    
-    background-color: #c42482;
-    background-image: linear-gradient(222deg,#ff272d 0,#c42482 33%,#ab217f 47%,#671878 84%,#4a1475 100%);
+  display: block;
+  box-sizing: border-box; 
+  margin: 0 auto;
+  
+  width: 150px;
+  height: 600px;
+  padding: 10px 0;
+  
+  font-size: 36px;
+  font-weight: bold;
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  
+  background-color: #c42482;
+  background-image: linear-gradient(222deg,#ff272d 0,#c42482 33%,#ab217f 47%,#671878 84%,#4a1475 100%);
   }
   
-  .banner-left {
-    width: 300px;
-    height: 150px;
-  }
-  
-  .banner-promo {
-    font-size: 36px;
-    font-weight: bold;
-    color: rgba(255,255,255,0.5);
+  .left-column__banner::before {
+    content: "Банер 150*600";
   }
 }
 
@@ -1155,20 +1143,18 @@ body {
   padding: 0;
 }
 
+@media (min-width: 768px) {
+  .page-footer {
+    margin: 0;
+    margin-top: 50px;
+    /* width: 1020px; */
+    padding: 0;
+  }
+}
+
 .page-footer__top {
   margin: 0 auto;
   width: 300px;
-  padding: 10px;
-  
-  background-color: rgba(230,0,60,1.0);
-}
-
-.page-footer__content,
-.page-footer__bottom {
-  /* display: flex; */
-  /* justify-content: space-between; */
-  margin: 0 auto;
-  /* width: 300px; */
   padding: 10px;
   
   background-color: rgba(230,0,60,1.0);
@@ -1178,69 +1164,21 @@ body {
   display: none;
 }
 
-@media (min-width: 768px) {
-  .page-footer {
-    margin: 0 auto;
-    margin-top: 50px;
-    width: 1020px;
-    padding: 0;
-  }
-  
-  .page-footer__top {
-    width: auto;
-  }
-  
-  .page-footer__top,
-  .page-footer__content,
-  .page-footer__bottom {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding: 10px;
-    
-    background-color: rgba(230,0,60,1.0);
-  }
-  
-  .page-footer__logo {
-    display: block;
-    margin: 10px 20px;
-  }
-
-  .page-footer__logo-link {
-    display: block;
-    margin: 0;
-    padding: 0;
-    line-height: 0;
-    /* font-size: 0; */
-  }
-
-  .page-footer__logo-image {
-    margin: 0;
-    padding: 0;
-    width: 150px;
-    /* height: 100%; */
-    /* height: 54px; */
-    height: auto;
-  }
-}
-
 .page-footer__social {
-  margin: auto 0px;
-  font-size: 20px;
+  margin: 0 auto;
   color: rgba(255,255,255,1.0);
+  text-align: center;
 }
 
 .social__title {
   display: inline-block;
+  padding-right: 10px;
   width: 150px;
-  /* vertical-align:  top; */
+  font-size: 16px;
 }
 
 .social__link {
   display: inline-block;
-  /* vertical-align:  top; */
-  margin: 0;
-  padding: 0;
   color: inherit;
   font-size: 0;
   vertical-align: middle;
@@ -1276,18 +1214,50 @@ body {
 }
 
 @media (min-width: 768px) {
+  .page-footer__top {
+    margin: 0 auto;
+    width: 1020px;
+  }
+  
+  .page-footer__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    
+    background-color: rgba(230,0,60,1.0);
+  }
+  
+  .page-footer__logo {
+    display: block;
+    margin: 10px 20px;
+  }
+
+  .page-footer__logo-link {
+    display: block;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+  }
+
+  .page-footer__logo-image {
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    /* height: 100%; */
+    /* height: 54px; */
+    height: auto;
+  }
+  
   .page-footer__social {
     margin: auto 20px;
-    
-    font-size: 20px;
-    color: rgba(255,255,255,1.0);
   }
 
   .social__title {
     display: inline-block;
-    margin: 0 20px;
     width: auto;
-    /* vertical-align: auto; */
+    
+    font-size: 18px;
+    color: rgba(255,255,255,1.0);
   }
 
   .social__link {
@@ -1304,6 +1274,30 @@ body {
     border: 1px solid rgba(255,255,255,1.0);
   } 
 } 
+
+.page-footer__content {
+  display: none;
+}
+
+.page-footer__content {
+  margin: 0 auto;
+  padding: 10px;
+  
+  background-color: rgba(230,0,60,1.0);
+}
+
+@media (min-width: 768px) {
+  .page-footer__content,
+  .page-footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1020px;
+    padding: 10px;
+    
+    background-color: rgba(230,0,60,1.0);
+  }
+}
 
 @media (min-width: 768px) {
   .page-footer__content {
@@ -1339,7 +1333,54 @@ body {
     margin: 5px 0;
     font-size: 20px;
   }
+}
 
+.page-footer__bottom {
+  margin: 0 auto;
+  padding: 0;
+  
+  color: rgba(255,255,255,1.0);
+  
+  border-top: 1px solid rgba(255,255,255,0.3);
+  background-color: rgba(230,0,60,1.0);
+}
+
+.page-footer__copyright {
+  margin: 0;
+  padding: 15px 10px;
+}
+
+.page-footer__development {
+  margin: 0;
+  padding: 15px 10px;
+  padding-bottom: 25px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  text-align: center;
+}
+
+.page-footer__development a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-footer__heart {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  font-size: 0;
+  vertical-align: top;
+  background-image: url("../img/sprite.png");
+  background-position: -5px -365px;
+  background-repeat: no-repeat;
+}
+
+.page-footer__development a:hover {
+  text-decoration: underline;
+}
+
+
+@media (min-width: 768px) {
   .page-footer__bottom {
     color: rgba(255,255,255,1.0);
     
