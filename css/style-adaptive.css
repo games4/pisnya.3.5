@@ -67,7 +67,7 @@ body {
   
   /* Общие / преобладающие параметры шрифтов для всей страницы  */
   font-weight: normal;
-  font-size: 12px;
+  font-size: 13px;
   line-height: normal;
   line-height: 18px;
   /* text-transform: uppercase; */
@@ -175,7 +175,6 @@ body {
     justify-content: space-between;
     display: none;
   }
-
 }
 
 .site-nav {
@@ -270,7 +269,7 @@ body {
 }
 
 .site-list__item {
-  margin: 0 15px;
+  margin: 0 10px;
 }
 
 .site-list__item:hover {
@@ -279,7 +278,7 @@ body {
 .site-list__item > a {
   display: block;
   box-sizing: border-box;
-  padding: 15px 15px;
+  padding: 15px 10px;
   height: 50px; 
   
   text-decoration: none;
@@ -333,9 +332,22 @@ body {
 }
 
 .open-item {
-  /* position: relative; */
+  position: relative;
   /* padding: 10px 20px; */
   cursor: pointer;
+}
+
+.open-item__toggle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  top: 0;
+  right: -65px;
+  /* background-color: rgba(0,0,0,0.5); */
+  background-color: transparent;
+  border: 1px solid rgba(0,0,0,0.5);
+  border-radius: 50%;
 }
 
 .open-list {
