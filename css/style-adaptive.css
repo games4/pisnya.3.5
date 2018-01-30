@@ -67,7 +67,7 @@ body {
   
   /* Общие / преобладающие параметры шрифтов для всей страницы  */
   font-weight: normal;
-  font-size: 13px;
+  font-size: 14px;
   line-height: normal;
   line-height: 18px;
   /* text-transform: uppercase; */
@@ -235,7 +235,8 @@ body {
 }
 
 .site-nav__list {
-  margin: 0 70px;
+  margin: 0;
+  margin-left: 70px;
 }
 
 @media (min-width: 768px) {
@@ -270,9 +271,7 @@ body {
 
 .site-list__item {
   margin: 0 10px;
-}
-
-.site-list__item:hover {
+  /* background-color: rgba(0,0,0,0.05); */
 }
 
 .site-list__item > a {
@@ -291,7 +290,7 @@ body {
 .site-list__item > a:hover {
   color: rgba(0,0,0,0.9);
   
-  background-color: rgba(0,0,0,0.05);
+  /* background-color: rgba(0,0,0,0.05); */
   border-color: rgba(230,0,60,1.0);
 }
 
@@ -331,23 +330,35 @@ body {
   }
 }
 
-.open-item {
+.open {
   position: relative;
   /* padding: 10px 20px; */
   cursor: pointer;
 }
 
-.open-item__toggle {
-  position: absolute;
-  width: 50px;
-  height: 50px;
+.open > a {
+  /* padding: 0 10px; */
+  
+  /* display: inline-block; */
+}
+
+.open__toggle {
+  position: absolute; 
+  margin: 0px 0;
   padding: 0;
-  top: 0;
-  right: -65px;
+  width: 0px;
+  height: 0px;
+  top: 18px;
+  right: 10px;
+  /* vertical-align: middle; */
   /* background-color: rgba(0,0,0,0.5); */
-  background-color: transparent;
-  border: 1px solid rgba(0,0,0,0.5);
-  border-radius: 50%;
+  /* background-color: gray; */
+  border: 15px solid rgba(255,255,255,1.0);
+  border-top: 15px solid rgba(0,0,0,0.3);
+  /* border-top: 15px solid gray; */
+  
+  /* border-left: 1px solid rgba(0,0,0,0.5); */
+  /* border-bottom: 1px solid rgba(0,0,0,0.5); */
 }
 
 .open-list {
@@ -385,7 +396,7 @@ body {
 }
 
 @media (min-width: 768px) {
-  .open-item {
+  .open {
     position: relative;
     cursor: pointer;
   }
@@ -396,7 +407,7 @@ body {
     /* background-color: rgba(255,255,255,1.0); */
   }
   
-  .open-item:hover .open-list {
+  .open:hover .open-list {
     display: block;
     position: absolute;
     z-index: 3;
