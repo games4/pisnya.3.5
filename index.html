@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="uk">
   <head>
-    <title>УП 3.5 | Головна</title>
     <meta charset="utf-8">
+    <title>УП 3.5 | Головна</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Головна сторінка інтернет-проекта УКРАЇНСЬКА ПІСНЯ. Популярні українські пісні, інформація про їх виконавців та авторів. Історії створення пісень, їх тексти та відеокліпи.">
     
     <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet"> -->
@@ -12,96 +13,122 @@
     
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="css/ style-settings.css">
     
   </head>
   
   <body>
     <header class="page-header">
     
-      <div class="page-header__top">
-        <div class="page-header__logo">
-          <a class="page-header__logo-link" href="#">
+      <div class="page-header__wrapper-top">
+        <div class="page-header__top">
+          <a class="page-header__logo" href="#">
             <img class="page-header__logo-image" src="img/pisnya-logo.svg" alt="Логотип 'Українська пісня'" width="200" height="73">
           </a>
-        </div>
         
-        <nav class="main-nav">
-          <ul class="main-nav__list main-list">
-            <li class="main-list__item">
-              <a href="#">Проект</a>
-            </li>
-            <li class="main-list__item">
-              <a href="#">Контакти </a>
-            </li>
-            <li class="main-list__item" style="display: none;">
-              <a href="#">Партнерам</a>
-            </li>
-          </ul>
-          <ul class="main-nav__list user-list">
-            <li class="user-list__item">
-              <a class="user-list__sign-in" href="signin.html">Увійти</a>
-            </li>
-            <li class="user-list__item">
-              <a class="user-list__sign-up" href="signup.html">Зареєструватися</a>
-            </li>
-          </ul>
-          <ul class="main-nav__list user-list">
-            <li class="user-list__item">
-              <a class="btn" href="userup.html">Обрати</a>
-            </li>
-          </ul>
-        </nav>
+          <nav class="main-nav none">
+            <ul class="main-nav__list user-list">
+              <li class="user-list__item">
+                <a class="user-list__sign-in" href="signin.html">Увійти</a>
+              </li>
+              <li class="user-list__item">
+                <a class="user-list__sign-up" href="signup.html">Зареєструватися</a>
+              </li>
+            </ul>
+            <ul class="main-nav__list user-list">
+              <li class="user-list__item">
+                <a class="btn" href="userup.html">Обрати</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
       
       <nav class="site-nav">
-        <button class="site-nav__toggle" type="button">Меню</button>
-        <ul class="site-nav__list">
-          <li class="site-nav__item site-nav__item--active">
+        <button class="site-nav__toggle" type="button"><span class="visually-hidden">Відкрити меню</span></button>
+        <ul class="site-nav__list site-list">
+          <li class="site-list__item site-list__item--active">
             <a href="#">Головна</a>
           </li>
-          <li class="site-nav__item">
+          <li class="site-list__item" style="display: none;">
             <a href="#">Новини</a>
           </li>
-          <li class="site-nav__item">
-            <a href="compositions.html">Композиції</a>
+          <li class="site-list__item">
+            <a href="compositions-adaptive.html">Композиції</a>
           </li>
-          <li class="site-nav__item">
-            <a href="#">Відеокліпи</a>
+          <li class="site-list__item">
+            <a href="#">Виконавці</a>
           </li>
-          <li class="site-nav__item">
+          <li class="site-list__item">
+            <a href="#">Композитори</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Поети</a>
+          </li>
+          <li class="site-list__item" style="display: none;">
             <a href="#">Статті</a>
           </li>
-          <li class="site-nav__item open-menu">
-            Каталог
-              <ul class="open-menu__list">
-                <li class="open-menu__item">
-                  <a href="#">Пісні</a>
-                </li>
-                <li class="open-menu__item">
-                  <a href="#">Виконавці</a>
-                </li>
-                <li class="open-menu__item">
-                  <a href="#">Композитори</a>
-                </li>
-                <li class="open-menu__item">
-                  <a href="#">Поети</a>
-                </li>
-              </ul>
+          <li class="site-list__item">
+            <a href="#">Відео</a>
           </li>
-          <li class="site-nav__item">
-            <a href="#">Хронологія</a>
+          
+          <li class="site-list__item open" style="display: none;">
+            <a>Каталог</a>
+            <button class="open__toggle" type="button"><span class="visually-hidden">Відкрити підменю</span></button>
+            <ul class="open-list">
+              <li class="open-list__item">
+                <a href="#">Пісні</a>
+              </li>
+              <li class="open-list__item">
+                <a href="#">Виконавці</a>
+              </li>
+              <li class="open-list__item">
+                <a href="#">Композитори</a>
+              </li>
+              <li class="open-list__item">
+                <a href="#">Поети</a>
+              </li>
+            </ul>
           </li>
 
+          <li class="site-list__item">
+            <a href="#">Хронологія</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Про проект</a>
+          </li>
+          <li class="site-list__item open" style="display: none;">
+            <a>Про проект</a>
+            <button class="open__toggle" type="button"><span class="visually-hidden">Відкрити підменю</span></button>
+            <ul class="open-list">
+              <li class="open-list__item">
+                <a href="#">Проект</a>
+              </li>
+              <li class="open-list__item">
+                <a href="#">Контакти </a>
+              </li>
+              <li class="open-list__item" <!-- style="display: none; -->">
+                <a href="#">Партнерам</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
+      
     </header>
     
-    <div class="main-container">
+    <div class="main-wrapper">
+    
       <aside class="left-column">
-        <div class="reclama banner">
-          <img class="banner__image--120-600" src="img/*.png" width="120" height="600" alt="рекламний банер">
+
+        <div class="left-column__container">
+          <span class="left-column__banner"></span>
         </div>
+        
+        <!-- <div class="reclama banner"> -->
+          <!-- <img class="banner__image--120-600" src="img/*.png" width="120" height="600" alt="рекламний банер"> -->
+        <!-- </div> -->
+        
         <section class="tools">
           <div class="tools__content counters">
           
@@ -110,83 +137,25 @@
       </aside>
       
       <main class="page-main">
-      
         <h1 class="visually-hidden">Сайт "Українська пісня" - тільки найкраща музика, тількі найцікавіші новини.</h1>
-
+        <div class="section__caption section__caption--promo">#Тема дня</div>
         <section class="promo">
-          <a class="promo__link" href="#composition">
-            <img class="promo__icon" src="img/day-song_promo.png" width="100" height="100" alt="Представляємо Сергія Бабкіна з композицією 'Де би я'">
-          </a>
-          <a class="promo__link" href="#composition">
-            <h2 class="promo__title">Де би я - Сергій Бабкін<br><span class="promo__authors">Слова: Сергій Бабкін, музика: Сергій Бабкін</span></h2>
-          </a>
+          <div class="promo__icon">
+            <a href="#composition">
+              <img src="img/day-song_promo.png" width="100" height="100" alt="Промо Сергія Бабкіна">
+            </a>
+          </div>
+          <h2 class="promo__title">
+            <a href="#composition">
+              <span class="promo__composition">Де би я - Сергій Бабкін</span><br>
+              <span class="promo__authors">Слова: Сергій Бабкін, музика: Сергій Бабкін</span>
+            </a>
+          </h2>
         </section>
         
-        <section class="new-compositions" style="display: none;">
-          <table class="new-compositions__list">
-            <caption class="new-compositions__header">
-              <h3 class="seven__title">#Наша сімка <span class="visually-hidden">(cімка найшовіших комозицій сайту)</span></h3>
-            </caption>
-            <tr>
-              <td class="compositions__date">
-                <time datetime="2017-11-30">2017-11-30</time>
-              </td>
-              <td class="compositions__title">
-                <a class="compositions__link" href="#">Знаєш мій день - Тартак та Арсен Мірзоян</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="compositions__date">
-                <time datetime="2017-11-25">2017-11-25</time>
-              </td>
-              <td class="compositions__title">
-                <a class="compositions__link" href="#">Поговори зі мною - PIANO</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="compositions__date">
-                <time datetime="2017-11-10">2017-11-10</time>
-              </td>
-              <td class="compositions__title">
-                <a class="compositions__link" href="#">Обійми - Selfy</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="compositions__date">
-                <time datetime="2017-10-25">2017-10-25</time>
-              </td>
-              <td class="compositions__title">
-                <a class="compositions__link" href="#">Ворони - Олександр Макаров</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="compositions__date">
-                <time datetime="2017-10-18">2017-10-18</time>
-              </td>
-              <td class="compositions__title">
-                <a class="compositions__link" href="#">Коли ти зі мною - Лев Ременєв</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="compositions__date">
-                <time datetime="2017-07-07">2017-07-07</time>
-              </td>
-              <td class="compositions__title">
-                <a class="compositions__link" href="#">На вершинi - Pianoбой feat. Morphom</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="compositions__date">
-                <time datetime="2017-06-26">2017-06-26</time></td>
-              <td class="compositions__title">
-                <a class="compositions__link" href="#">Добре з тобою - Світлана Тарабарова</a>
-              </td>
-            </tr>
-          </table>
-        </section>
-        
+        <div class="section__caption">#Наша сімка </div>
         <section class="new-compositions">
-          <h3 class="new-compositions__title">#Наша сімка <span class="visually-hidden">(cімка найшовіших комозицій сайту)</span></h3>
+          <h3 class="new-compositions__title visually-hidden">Cімка найшовіших комозицій сайту)</h3>
           <ul class="compositions__list">
             <li>
               <a class="compositions__link" href="#">
@@ -233,16 +202,15 @@
           </ul>
         </section>
         
-        <div class="page-main__banner--468-60">
-          <span class="page-main__banner--promo">Банер 468 * 60</span>
+        <div class="page-main__container">
+          <div class="page-main__banner"></div>
         </div>
         
+        <div class="section__caption">#Композиція дня</div>
         <article class="composition" id="composition">
         
-          <span class="composition__caption">#Пісня дня</span>
-          
           <div class="composition__video">
-            <iframe width="480" height="270" src="https://www.youtube-nocookie.com/embed/dSd4ss0qK_g?rel=0&amp;start=127" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dSd4ss0qK_g?rel=0&amp;start=127" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
           
           <header class="composition__info">
@@ -313,21 +281,49 @@
       </main>
       
       <aside class="right-column">
-      
-        <section class="top-composition">
-          <a class="top-composition__link">
-            <h3 class="top-composition__title">
-              <span class="top-composition__name">Любов жива </span>
-              <span class="top-composition__performer">Павло Табаков</span>
-            </h3>
-            <p  class="top-composition__images">
-              <img src="img/240-160.jpg" width="240" height="160" alt="Любов жива Павло Табаков">
-            </p>
-          </a>
-        </section>
+        <input type="radio" id="btn-1" name="toggle" checked>
+        <input type="radio" id="btn-2" name="toggle">
+        <input type="radio" id="btn-3" name="toggle">
+        <div class="composition-top slider">
+          <div class="slide" id="slide1">
+            <a class="composition-top__link" href="http://www.pisnya.org.ua/kompozycija.php?id=735">
+              <div class="composition-top__images">
+                <img src="img/240-135_00735.jpg" width="240" height="135" alt="Обкладинка до композиції Павло Табаков - Любов жива">
+              </div>
+              <h3 class="composition-top__title">
+                <span class="composition-top__name">Любов жива</span> - <span class="composition-top__performer">Павло Табаков</span>
+              </h3>
+            </a>
+          </div>
+          <div class="slide" id="slide2">
+            <a class="composition-top__link" href="http://www.pisnya.org.ua/kompozycija.php?id=756">
+              <div class="composition-top__images">
+                <img src="img/240-135_00756.jpg" width="240" height="135" alt="Обкладинка до композиції THE HARDKISS - Журавлi">
+              </div>
+              <h3 class="composition-top__title">
+                <span class="composition-top__name">Журавлi</span> - <span class="composition-top__performer">THE HARDKISS</span>
+              </h3>
+            </a>
+          </div>
+          <div class="slide" id="slide3">
+            <a class="composition-top__link" href="http://www.pisnya.org.ua/kompozycija.php?id=794">
+              <div class="composition-top__images">
+                <img src="img/240-135_00794.jpg" width="240" height="135" alt="Обкладинка до композиції вітлана Тарабарова / TARABAROVA - Цунамі">
+              </div>
+              <h3 class="composition-top__title">
+                <span class="composition-top__name">Цунамі </span> - <span class="composition-top__performer">TARABAROVA</span>
+              </h3>
+            </a>
+          </div>
+          <div class="slider__controls">
+            <label for="btn-1"><span></span></label>
+            <label for="btn-2"><span></span></label>
+            <label for="btn-3"><span></span></label>
+          </div>
+        </div>
         
-        <div class="right-column__banner">
-          <span class="right-column__banner--promo">Банер 300 * 600</span>
+        <div class="right-column__container">
+          <div class="right-column__banner"><!-- Банер 300 * 600 --></div>
         </div>
         
       </aside>
@@ -336,88 +332,89 @@
     
     
     <footer class="page-footer">
-    
-      <div class="page-footer__top">
-        <div class="page-footer__logo">
-          <a class="page-footer__logo-link" href="#">
-            <img class="page-footer__logo-image" src="img/pisnya-logo.svg" alt="Логотип проекта 'Українська пісня'" width="220" height="100%">
-          </a>
+      <div class="page-footer__adaptive-container">
+        <div class="page-footer__top">
+          <div class="page-footer__logo">
+            <a class="page-footer__logo-link" href="#">
+              <img class="page-footer__logo-image" src="img/pisnya-logo.svg" alt="Логотип проекта 'Українська пісня'" width="220" height="100%">
+            </a>
+          </div>
+          
+          <p class="page-footer__social social">
+            <b class="social__title">Приєднуйтеся до нас:</b>
+            <a class="social__link social__link--fb" href="https://facebook.com/pisnya.org.ua" target="blank">Українська пісня у Фейсбуці</a>
+            <a class="social__link social__link--yt" href="https://youtube.com/pisnya.org.ua" target="blank">Українська пісня на Ютуб</a>
+            <a class="social__link social__link--tw" href="https://twitter.com/pisnya.org.ua" target="blank">Українська пісня в Твіттері</a>
+          </p>
+          
         </div>
         
-        <div class="page-footer__social social">
-          <b class="social__title">Приєднуйтеся до нас</b>
-          <a class="social__link social__link--fb" href="https://facebook.com/pisnya.org.ua" target="blank">Українська пісня у Фейсбуці</a>
-          <a class="social__link social__link--yt" href="https://youtube.com/pisnya.org.ua" target="blank">Українська пісня на Ютуб</a>
-          <a class="social__link social__link--tw" href="https://twitter.com/pisnya.org.ua" target="blank">Українська пісня в Твіттері</a>
-        </div>
-        
-      </div>
-      
-      <div class="page-footer__content">
+        <div class="page-footer__content">
 
-      <section class="page-footer__menu menu__project">
-          <ul class="page-footer__list">
-            <li>
-              <a href="#">Про проект</a>
-            </li>
-            <li>
-              <a href="#">Контакти</a>
-            </li>
-            <li>
-              <a href="#">Реклама</a>
-            </li>
-            <li>
-              <a href="#">Карта</a>
-            </li>
-          </ul>
-        </section>
+          <section class="page-footer__menu menu__project">
+            <ul class="page-footer__list">
+              <li>
+                <a href="#">Про проект</a>
+              </li>
+              <li>
+                <a href="#">Контакти</a>
+              </li>
+              <li>
+                <a href="#">Реклама</a>
+              </li>
+              <li>
+                <a href="#">Карта</a>
+              </li>
+            </ul>
+          </section>
+          
+          <section class="page-footer__menu">
+            <h3 class="page-footer__title none">Каталог</h3>
+            <ul class="page-footer__list">
+              <li>
+                <a href="#">Пісні</a>
+              </li>
+              <li>
+                <a href="#">Виконавці</a>
+              </li>
+              <li>
+                <a href="#">Автори музики</a>
+              </li>
+              <li>
+                <a href="#">Автори текстів</a>
+              </li>
+              <li class="none">
+                <a href="#">Стилі</a>
+              </li>
+            </ul>
+          </section>
+          
+          <section class="page-footer__menu menu__project">
+            <ul class="page-footer__list">
+              <li>
+                <a href="#">Увійти</a>
+              </li>
+              <li>
+                <a href="#">Зареєструватися</a>
+              </li>
+              <li>
+                <a href="#">Залишити відгук</a>
+              </li>
+            </ul>
+          </section>
+          
+        </div>
         
-        <section class="page-footer__menu">
-          <h3 class="page-footer__title none">Каталог</h3>
-          <ul class="page-footer__list">
-            <li>
-              <a href="#">Пісні</a>
-            </li>
-            <li>
-              <a href="#">Виконавці</a>
-            </li>
-            <li>
-              <a href="#">Автори музики</a>
-            </li>
-            <li>
-              <a href="#">Автори текстів</a>
-            </li>
-            <li class="none">
-              <a href="#">Стилі</a>
-            </li>
-          </ul>
-        </section>
-        
-        <section class="page-footer__menu menu__project">
-          <ul class="page-footer__list">
-            <li>
-              <a href="#">Увійти</a>
-            </li>
-            <li>
-              <a href="#">Зареєструватися</a>
-            </li>
-            <li>
-              <a href="#">Залишити відгук</a>
-            </li>
-          </ul>
+        <section class="page-footer__bottom">
+          <p class="page-footer__copyright">
+            Культурно-соціальний проект "Українська пісня" | © 2003 - 2018 Всі права застережено
+          </p>
+          <p class="page-footer__development">
+            <a href="https://games4.github.io/">Зроблено з <span class="page-footer__heart">любов'ю</span> до людей!</a>
+          </p>
         </section>
         
       </div>
-      
-      <section class="page-footer__bottom">
-        <p class="page-footer__copyright">
-          Культурно-соціальний проект "Українська пісня" | © 2003 - 2018 Всі права застережено
-        </p>
-        <p class="page-footer__development">
-          <a href="https://games4.github.io/">Зроблено з <span class="page-footer__heart">любов'ю</span> до людей!</a>
-        </p>
-      </section>
-      
     </footer>
     
   </body>
