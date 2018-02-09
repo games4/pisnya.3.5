@@ -1373,23 +1373,19 @@ body {
 }
 
 .composition-top {
-  margin: 0 auto;
   box-sizing: border-box;
-  padding: 10px 0;
+  margin: 0 auto;
   min-width: 300px;
   margin-bottom: 32px;
-  font-size: 15px;
+  padding: 0;
 }
 
 @media (min-width: 768px) {
   .composition-top {
     min-width: 240px;
-    padding: 0;
    /* width: 240px; */
     margin-bottom: 32px;
-    font-size: 15px;
-    border: none;
-  }
+ }
 }
 
 .slider {
@@ -1428,11 +1424,26 @@ body {
 }
 
 .slider__controls {
-  padding: 0 10px;
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px 10px;
+  bottom: 38px;
+  left: 0;
+  
   text-align: center;
   font-size: 0;
   line-height: 0;
+  
   /* border-top: 1px solid #cccccc; */
+  background-color: rgba(0,0,0,0.4);
+  /* background: url("../img/bg_opacity.png"); */
+}
+
+@media (min-width: 768px) {
+  .slider__controls {
+    padding: 10px 10px;
+  }
 }
 
 .slider__controls label {
@@ -1452,21 +1463,50 @@ body {
   
   /* vertical-align: top; */  
   background-color: transparent;
-  border: 2px solid rgba(0,0,0,0.5);
+  /* border: 2px solid rgba(0,0,0,0.5); */
+  border: 2px solid rgba(255,255,255,0.8);
   border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  .slider__controls label {
+    /* height: 10px; */
+  }
+  
+  .slider__controls span {
+    width: 10px;
+    height: 10px;
+    
+    border: 2px solid rgba(255,255,255,0.8);
+  }
 }
 
 .composition-top__title {
   margin: 0;
   padding: 10px 0;
-  font-size: inherit;
+  font-size: 16px;
   font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .composition-top__title {
+    padding: 10px 0;
+    font-size: 16px;
+  }
 }
 
 .composition-top__images,
 .composition-top__images img {
   width: 300px;
   height: 169px;
+}
+
+@media (min-width: 768px) {
+  .composition-top__images,
+  .composition-top__images img {
+    width: 240px;
+    height: 135px;
+  }
 }
 
 #btn-1:checked ~ .composition-top #slide1,
@@ -1478,7 +1518,8 @@ body {
 #btn-1:checked ~ .composition-top label[for="btn-1"] span,
 #btn-2:checked ~ .composition-top label[for="btn-2"] span,
 #btn-3:checked ~ .composition-top label[for="btn-3"] span{
-  background-color: rgba(0,0,0,0.5);
+  /* background-color: rgba(0,0,0,0.5); */
+  background-color: rgba(255,255,255,0.8);
 }
 
 .right-column__container {
